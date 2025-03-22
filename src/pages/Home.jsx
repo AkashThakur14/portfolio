@@ -1,35 +1,30 @@
-import { motion } from "framer-motion";
+
 
 export const Home = () => {
   return (
-    <div className="home-page">
-<div className="home-page bg-white min-h-screen flex flex-col items-center justify-center px-6">
-  <div className="w-full flex items-center justify-center h-[600px]">
-    <div className="flex w-full max-w-screen-xl">
-      {/* Left Column (Description on Top, Image Below) */}
-      <div className="w-1/2 p-4 flex flex-col justify-between">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Hey, I'am Akash</h2>
-          <p className="text-lg text-gray-600">
-            I'm currently working on full-stack projects and love learning new
-            frameworks.
-          </p>
+    <div className="common-wrapper">
+      <div className="section-container">
+        <div className="content">
+          {/* Left Column (Text) */}
+          <div className="text-section">
+            <h1><span className="highlight">Hello,</span> <br /> I Am <span className="white">Akash.</span></h1>
+            <h2 className="sub-title">Full-Stack Developer</h2>
+            <p>
+              Passionate about building scalable web applications and user-friendly designs.
+            </p>
+            <button className="btn">Hire Me →</button>
+          </div>
+
+          {/* Right Column (Image) */}
+          <div className="image-section">
+            <img src="/images/akash.jpg" alt="Akash" className="profile-img" />
+          </div>
         </div>
       </div>
-
-      {/* Right Column (Image) */}
-      <div className="w-1/2 p-4">
-        <img
-          src="/images/akash.jpg"
-          alt="Akash"
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+      
     </div>
-  </div>
-</div>
 
-    
-    </div>
+
+
   )
 }

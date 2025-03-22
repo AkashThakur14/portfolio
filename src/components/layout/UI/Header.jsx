@@ -1,36 +1,47 @@
-import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleButtonToggle = () => setShow(!show);
+  const handleCloseMenu = () => setShow(false);
 
   return (
-    <nav>
+    <header>
       <div className="container">
-        <div className="brand">Akash</div>
-
-        <div className="nav-links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+        {/* Logo Section */}
+        <div className="logo">
+          <NavLink to="/" onClick={handleCloseMenu}>
+            <h1>Akash</h1>
+          </NavLink>
         </div>
 
-        <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
+        {/* Navigation */}
+        <nav className={show ? "menu-mobile" : "menu-web"}>
+          <ul>
+            <li><NavLink to="/" onClick={handleCloseMenu}>Home</NavLink></li>
+            <li><NavLink to="/about" onClick={handleCloseMenu}>About</NavLink></li>
+            <li><NavLink to="/services" onClick={handleCloseMenu}>Services</NavLink></li>
+            <li><NavLink to="/projects" onClick={handleCloseMenu}>Projects</NavLink></li>
+            <li><NavLink to="/contact" onClick={handleCloseMenu}>Contact</NavLink></li>
+          </ul>
+        </nav>
 
-      <div className={`mobile-menu ${isOpen ? "active" : ""}`}>
-        <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
-        <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
-        <NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
-        <NavLink to="/projects" onClick={() => setIsOpen(false)}>Projects</NavLink>
-        <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+        {/* Resume Button */}
+        <NavLink to="/" className="resume-button">
+          Resume <ArrowRight size={18} />
+        </NavLink>
+
+        {/* Hamburger Menu */}
+        <div className="han-menu">
+          <button onClick={handleButtonToggle}>
+            <GiHamburgerMenu />
+          </button>
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };

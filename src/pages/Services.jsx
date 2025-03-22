@@ -2,6 +2,6 @@
 
 export const Services = () => {
   return (
-    <div>Services</div>
+    <div className="common-wrapper">Services</div>
   )
 }
