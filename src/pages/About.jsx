@@ -3,7 +3,15 @@
 export const About = () => {
   return (
     <div className="common-wrapper">
-      <div className="section-container">
+      <div className="about-container">
+      <div className="advantage-header">
+        <h2>My Advantage</h2>
+        <p>
+          Must explain to you how all this mistaken idea of denouncing pleasure
+          and praising pain was born and I will give you a complete account the
+          system and expound the actual and praising pain was born.
+        </p>
+      </div>
         <div className="advantage-section">
           {/* Experience Box */}
           <div className="experience-container">

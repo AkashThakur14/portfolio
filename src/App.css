@@ -284,67 +284,74 @@ nav ul li a:hover {
   z-index: 2;
 }
 
+/* Global Styles */
+.about-container {
+  width: 100%;
+  background: #000; 
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.advantage-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.advantage-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.advantage-header p {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
 /* Advantage Section */
 .advantage-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
-  padding: 50px 20px;
-  background: #111;
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.1);
-}
-
-/* Section Container */
-.section-container {
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
-  width: 90%;
-  margin: auto;
-  position: relative;
-  z-index: 2;
-}
-
-/* Advantage Section */
-.advantage-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
   gap: 30px;
 }
 
 /* Experience Box */
 .experience-container {
-  background-color: #222;
-  padding: 30px;
-  border-radius: 12px;
+  background: linear-gradient(to bottom, #222, #000);
+  padding: 40px;
+  border-radius: 15px;
   text-align: center;
-  width: 300px;
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  width: 350px;
 }
 
 .experience-years {
   font-size: 60px;
   font-weight: bold;
-  color: yellow;
-  margin: 0;
+  color: #FFD700; /* Yellow color */
 }
 
 .client-satisfaction {
-  background-color: #333;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 15px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .client-satisfaction h4 {
-  color: green;
-  font-size: 26px;
-  margin: 0;
+  font-size: 30px;
+  color: #32CD32; /* Green color */
 }
 
 /* Skills Section */
@@ -352,69 +359,70 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
+  width: 100%;
   max-width: 600px;
 }
 
-/* Skill Box */
 .skill-box {
-  background-color: #222;
+  background: #111;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 .skill-box:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
 .skill-box h4 {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 0;
+  font-size: 24px;
+  color: #fff;
 }
 
 .skill-box p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  color: #FFD700; /* Yellow color */
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .advantage-section {
     flex-direction: column;
     align-items: center;
   }
 
-  .skills-container {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-  }
-
   .experience-container {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
   }
-}
 
-@media (max-width: 768px) {
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .skills-container {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .experience-container {
-    width: 90%;
+    padding: 30px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .experience-years {
+    font-size: 50px;
+  }
+
+  .client-satisfaction h4 {
+    font-size: 25px;
+  }
+}
+
 
 
 
@@ -565,5 +573,162 @@ nav ul li a:hover {
   .footer-column {
     text-align: center;
     width: 100%;
+  }
+}
+
+
+/* Contact us */
+.contact-container {
+  width: 100%;
+  background: #000;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Header */
+.contact-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contact-header p {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Contact Form (Left Side) */
+.contact-form {
+  background: #111;
+  padding: 40px;
+  border-radius: 15px;
+  width: 50%;
+  min-width: 350px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input {
+  width: 50%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #28a745;
+}
+
+/* Submit Button */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #218838;
+}
+
+/* Contact Info (Right Side) */
+.contact-info {
+  text-align: left;
+  width: 40%;
+  min-width: 300px;
+}
+.contact-info p{
+ color: #fff;
+}
+
+.info-box {
+  background: #222;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info-box a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.info-box a:hover {
+  color: #28a745;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-header h2 {
+    font-size: 30px;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-header h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 20px;
   }
 }

@@ -21,10 +21,10 @@ export const Footer = () => {
             <a href="https://github.com/AkashThakur14" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} />
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <a href="www.linkedin.com/in/akash-singh-99045219a" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={24} />
             </a>
-            <a href="mailto:ak9988385532">
+            <a href="mailto:ak9988385532@gmail.com">
               <FaEnvelope size={24} />
             </a>
           </div>
