@@ -6,7 +6,7 @@
 
 html {
   font-size: 10px;
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -22,7 +22,7 @@ a:hover {
 }
 
 header {
-  background: transparent;
+  background: #5555552e;
   color: white;
   padding: 15px 20px;
   width: 100%;
@@ -423,10 +423,186 @@ nav ul li a:hover {
   }
 }
 
+.services-wrapper {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card .service-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #3b82f6;
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* One column for mobile screens */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem; /* Smaller font for mobile */
+  }
+
+  .hero-section p {
+    font-size: 1rem; /* Smaller font for mobile */
+  }
+
+  .cta-button {
+    font-size: 1rem; /* Smaller button text */
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    width: 100%; /* Full-width button on very small screens */
+    padding: 12px;
+  }
+}
 
 
+.projects-wrapper {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
 
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* One column for mobile screens */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem; /* Smaller font for mobile */
+  }
+
+  .hero-section p {
+    font-size: 1rem; /* Smaller font for mobile */
+  }
+}
 
 
 /* Footer Styles */
@@ -442,13 +618,13 @@ nav ul li a:hover {
   background: #ff3b47;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically */
+  align-items: center;  
+  justify-content: center; 
   text-align: center;
   width: 100%;
   padding: 40px 20px;
-  gap: 15px; /* Adds space between h2 and button */
-  min-height: 150px; /* Ensures sufficient height for centering */
+  gap: 15px; 
+  min-height: 150px; 
 }
 
 .footer-top h2 {
